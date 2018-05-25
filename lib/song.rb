@@ -52,7 +52,7 @@ class Song
     song
   end
   
-  def self.create_From_filename(filename_string)
+  def self.create_from_filename(filename_string)
     self.new_from_filename(filename_string)
     @@all << song 
   end 
