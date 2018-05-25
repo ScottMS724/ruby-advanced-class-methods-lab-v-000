@@ -44,7 +44,7 @@ class Song
   def self.new_from_filename(filename_string)
     filename_array = filename_string.split("-")
     filename_array.tr('.mp3', '')
-    
+    filename_array[0] = new_song_name
     
     
   end
