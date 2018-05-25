@@ -42,14 +42,15 @@ class Song
   end 
   
   def self.new_from_filename(filename_string)
-    filename_string.tr('.mp3', '')
-    filename_array = filename_string.split("-")
-    new_song_artist_name = filename_array[0]
-    new_song_name = filename_array[1]
-   
-    song = self.new 
-    song.artist_name = new_song_artist_name
-    song.name = new_song_name 
+    row = filename
+    data = row.split(" - ")
+    artist_name = data[0]
+    song_name = data[1].gsub(".mp3", "")
+
+    song = self.new
+    song.name = song_name
+    song.artist_name = artist_name
+    song
   end
 
 end
